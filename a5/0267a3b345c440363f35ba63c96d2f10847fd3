@@ -1,0 +1,20 @@
+LICENSE
+  h_364405ec3f36af 1-661
+README.md
+  h_364405ec3f36af 1-18
+action.yml
+  h_364405ec3f36af 1-22
+check-git-ai.sh
+  h_364405ec3f36af 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a50267a3b345c440363f35ba63c96d2f10847fd3",
+  "prompts": {},
+  "humans": {
+    "h_364405ec3f36af": {
+      "author": "Lorenz Sieben <sieben@gea.mpg.de>"
+    }
+  }
+}
