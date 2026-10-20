@@ -16,7 +16,11 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/check-git-ai.sh $REVISION-RANGE 
+    - name: Fetch notes refs
+      run: git fetch origin refs/notes/*:refs/notes/*
+      shell: bash
+    - name: Check if commits were annotated using git-ai
+      run: ${{ github.action_path }}/check-git-ai.sh $REVISION_RANGE 
       shell: bash
       env:
-        REVISION-RANGE: ${{ inputs.revision-range }}
+        REVISION_RANGE: ${{ inputs.revision-range }}
