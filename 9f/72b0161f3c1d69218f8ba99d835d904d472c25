@@ -1,0 +1,16 @@
+README.md
+  h_364405ec3f36af 9-20
+action.yml
+  h_364405ec3f36af 19-23,26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9f72b0161f3c1d69218f8ba99d835d904d472c25",
+  "prompts": {},
+  "humans": {
+    "h_364405ec3f36af": {
+      "author": "Lorenz Sieben <sieben@gea.mpg.de>"
+    }
+  }
+}
