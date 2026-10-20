@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2026 Lorenz Sieben <sieben@gea.mpg.de>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+name: Check git-ai
+description: Checks if git-ai was used and fails, if the specified commits are not annotated by git-ai.
+author: Lorenz Sieben
+inputs:
+  revision-range:
+    description: 'Check all commits within this revision range (e.g. HEAD~3..HEAD for the last 3). Checks the top commit by default.'
+    required: false
+    default: 'HEAD~1..HEAD'
+  path:
+    description: "Folder of the git repository (checked out, default is the current directory)."
+    default: "."
+
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/check-git-ai.sh $REVISION-RANGE 
+      shell: bash
+      env:
+        REVISION-RANGE: ${{ inputs.revision-range }}
